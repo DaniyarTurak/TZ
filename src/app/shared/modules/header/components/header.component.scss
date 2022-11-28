@@ -130,6 +130,15 @@
             background: #eee;
           }
         }
+
+        a {
+          border-radius: 0px;
+        }
+
+        a:hover {
+          background: #6e0d9a;
+          color: #eb00ff;
+        }
       }
     }
   }
