@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="./assets/images/logo.png" alt="logo" />
+    <a class="navbar-brand" [routerLink]="['/']">penrose</a>
+  </div>
+
+  <input type="checkbox" id="menu-bar" />
+  <label for="menu-bar">
+    <i class="fas fa-bars"></i>
+  </label>
+
+  <ul class="nav">
+    <li class="nav-item">
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/']">New Collections</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/']">Store +</a>
+      <ul>
+        <li class="nav-item">
+          <a [routerLink]="['/']">Women</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/']">Contacts</a>
+    </li>
+  </ul>
+</nav>

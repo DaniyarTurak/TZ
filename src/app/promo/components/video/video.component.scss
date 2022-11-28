@@ -1,0 +1,50 @@
+.image-video-wrp {
+  figure {
+    position: relative;
+    top: 70vh;
+    margin-left: 10vw;
+
+    .play-icon-box {
+      position: absolute;
+      bottom: 25%;
+      left: 100px;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      background-color: #fff;
+      opacity: 0.5;
+      cursor: pointer;
+
+      .play {
+        position: absolute;
+        top: 25%;
+        left: 35%;
+      }
+
+      .pause {
+        position: absolute;
+        top: 25%;
+        left: 28%;
+      }
+    }
+
+    .play-icon-box:hover {
+      opacity: 1;
+    }
+  }
+
+  .thumblin {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 990px) {
+  .image-video-wrp {
+    figure {
+      top: 500px;
+      left: 0;
+      right: 0;
+    }
+  }
+}

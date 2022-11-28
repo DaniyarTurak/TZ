@@ -1,0 +1,38 @@
+<div *ngIf="quotes && quotes.length > 0" class="quotes-container">
+  <div
+    *ngFor="let quote of quotes; let i = index"
+    [ngClass]="{ 'quote-active': selectedIndex === i }"
+    [style]="{ 'margin-bottom': '10px' }"
+    class="quote fade"
+  >
+    <i class="fas fa-quote-left quote-sign"></i>
+    <div [style]="{ padding: '20px' }">
+      <p class="text">{{ quote.text }}</p>
+    </div>
+    <div class="author">- {{ quote.author || "Unknown Author" }}</div>
+  </div>
+
+  <div class="quotes-dot-container">
+    <span
+      *ngFor="let dot of quotes; let i = index"
+      class="dot"
+      [ngClass]="{ active: selectedIndex === i }"
+      (click)="selectQuote(i)"
+    ></span>
+  </div>
+
+  <button
+    class="btn-quotes btn-prev"
+    (click)="onPrevClick()"
+    [ngClass]="{ hide: selectedIndex === 0 }"
+  >
+    <i class="fas fa-chevron-left icon-quotes icon-prev"></i>
+  </button>
+  <button
+    class="btn-quotes btn-next"
+    (click)="onNextClick()"
+    [ngClass]="{ hide: selectedIndex === quotes.length - 1 }"
+  >
+    <i class="fas fa-chevron-right icon-quotes icon-next"></i>
+  </button>
+</div>

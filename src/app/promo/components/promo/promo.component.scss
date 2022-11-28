@@ -1,0 +1,36 @@
+.promo {
+  height: 1050px;
+  background-color: #000000c6;
+  background-image: url("../../../../assets/images/Triangle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .model {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-title {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 990px) {
+  .promo {
+    background-color: #000000c6;
+    background-image: none;
+
+    .model {
+      display: none;
+    }
+
+    .main-title {
+      display: none;
+    }
+  }
+}

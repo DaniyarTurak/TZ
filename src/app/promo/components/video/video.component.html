@@ -1,0 +1,28 @@
+<div class="image-video-wrp">
+  <figure>
+    <ng-container *ngIf="videodisabled; else videoblock">
+      <img src="./assets/images/video-poster.jpeg" class="img-fluid thumblin" />
+    </ng-container>
+    <ng-template #videoblock>
+      <iframe
+        width="245px"
+        height="150px"
+        src="https://www.youtube.com/embed/8uIe0qY9qG8?autoplay=1&mute=1&controls=0"
+      ></iframe>
+    </ng-template>
+    <div class="play-icon-box" (click)="changeImg()">
+      <img
+        *ngIf="!pause"
+        class="play"
+        src="./assets/images/play.png"
+        alt="play"
+      />
+      <img
+        *ngIf="pause"
+        class="pause"
+        src="./assets/images/pause.png"
+        alt="play"
+      />
+    </div>
+  </figure>
+</div>

@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent
+    linear-gradient(
+      180deg,
+      #000000 0%,
+      #000000c6 40%,
+      #0000002c 82%,
+      #00000000 100%
+    )
+    0% 0% no-repeat padding-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 5px 50px;
+  z-index: 2;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: #c445f4;
+      font: normal normal 600 64px/80px Source Sans Pro;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  label {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 600px;
+
+    .nav-item {
+      position: relative;
+
+      ul {
+        position: absolute;
+        background: #fff;
+
+        border-radius: 10px;
+        display: none;
+
+        a {
+          color: #2c4f9d;
+        }
+      }
+
+      a {
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 10px;
+        color: #333;
+        display: block;
+        color: #c445f4;
+        font: normal normal 600 18px/23px Source Sans Pro;
+        text-transform: uppercase;
+      }
+    }
+
+    .nav-item:not(:first-child) {
+      a:hover {
+        //#BF4CFC #803DDD #6E0D9A
+        background: #6e0d9a;
+        color: #eb00ff;
+      }
+    }
+
+    .nav-item:first-child {
+      a:hover {
+        color: #eee;
+      }
+    }
+
+    .nav-item:focus-within > ul,
+    .nav-item:hover > ul {
+      display: initial;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .navbar {
+    padding: 20px 50px;
+
+    label {
+      display: initial;
+      color: #fff;
+    }
+
+    #menu-bar:checked ~ .nav {
+      display: initial;
+    }
+
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border-top: 1px solid rgb(0, 0, 0, 0.1);
+      display: none;
+      width: 100%;
+
+      .nav-item {
+        background: #fff;
+
+        ul {
+          position: relative;
+
+          li {
+            background: #eee;
+          }
+        }
+      }
+    }
+  }
+}
