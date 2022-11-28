@@ -1,36 +1,37 @@
 .image-video-wrp {
-  figure {
-    position: relative;
-    top: 70vh;
-    margin-left: 10vw;
+  position: relative;
+  height: 100px;
+  width: 200px;
+  top: 550px;
+  left: 200px;
+  z-index: 2;
 
-    .play-icon-box {
+  .play-icon-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+
+    .play {
       position: absolute;
-      bottom: 25%;
-      left: 100px;
-      width: 60px;
-      height: 60px;
-      border-radius: 100%;
-      background-color: #fff;
-      opacity: 0.5;
-      cursor: pointer;
-
-      .play {
-        position: absolute;
-        top: 25%;
-        left: 35%;
-      }
-
-      .pause {
-        position: absolute;
-        top: 25%;
-        left: 28%;
-      }
+      top: 25%;
+      left: 35%;
     }
 
-    .play-icon-box:hover {
-      opacity: 1;
+    .pause {
+      position: absolute;
+      top: 25%;
+      left: 28%;
     }
+  }
+
+  .play-icon-box:hover {
+    opacity: 1;
   }
 
   .thumblin {
@@ -39,12 +40,10 @@
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1400px) {
   .image-video-wrp {
-    figure {
-      top: 500px;
-      left: 0;
-      right: 0;
-    }
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
